@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = 'crypto-history-service'
+        REGISTRY = 'localhost:5000'
+        IMAGE_TAG = "${REGISTRY}/${IMAGE_NAME}:${BUILD_NUMBER}"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from your GitHub repository
+                git 'https://github.com/amparab/crypto-history.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image
+                    sh "docker build -t ${IMAGE_TAG} ."
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Push the image to the registry
+                    sh "docker push ${IMAGE_TAG}"
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    // Deploy the Docker container
+                    sh "docker run -e JAVA_OPTS=\"-Dapi_key=482ca6e1dfab2be61f618712\" -p 8080:8080 crypto-history-service"
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up any temporary files or containers
+            sh 'docker system prune -f'
+        }
+
+        success {
+            echo "Build and deployment successful!"
+        }
+
+        failure {
+            echo "Build or deployment failed!"
+        }
+    }
+}
