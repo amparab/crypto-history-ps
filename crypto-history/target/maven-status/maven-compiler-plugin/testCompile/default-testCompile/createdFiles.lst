@@ -1,5 +1,0 @@
-com\publicissapient\cryptohistory\controller\BitcoinHistoryControllerTest.class
-com\publicissapient\cryptohistory\service\cache\BitcoinHistoryCacheServiceTest.class
-com\publicissapient\cryptohistory\service\PriceServiceTest.class
-com\publicissapient\cryptohistory\service\history\BitcoinHistoryQueryServiceTest.class
-com\publicissapient\cryptohistory\template\BitcoinHistoryServiceTest.class
