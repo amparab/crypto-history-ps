@@ -1,11 +1,11 @@
 # crypto-history
 
 This is a project to fetch the bitcoin prices history for a specified date range.
-This project consists of a UI and a backend to server the request.
+This project consists of a UI and a Backend service.
 
 ## Run the service locally.
 
-You can run the service locally in your favourite IDE.
+You can run the service locally.
 Just add the following VM arg. ```-Dapi_key=<API_KEY>```
 and run the Spring boot application.
 The UI should be accessible on http://localhost:8080/
