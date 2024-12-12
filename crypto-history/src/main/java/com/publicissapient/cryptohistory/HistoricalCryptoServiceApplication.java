@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class HistoricalBitcoinServiceApplication {
+public class HistoricalCryptoServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HistoricalBitcoinServiceApplication.class, args);
+		SpringApplication.run(HistoricalCryptoServiceApplication.class, args);
 	}
 
 }

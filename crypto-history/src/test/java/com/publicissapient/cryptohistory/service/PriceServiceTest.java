@@ -29,15 +29,13 @@ public class PriceServiceTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        responseBuilder = new HistoryResponse.Builder();  // Assuming a builder is available for HistoryResponse
+        responseBuilder = new HistoryResponse.Builder();
 
-        // Initialize mock bitcoin history data
         bitcoinHistoryForDateRange = new HashMap<>();
         bitcoinHistoryForDateRange.put("2024-12-01", new BigDecimal("30000"));
         bitcoinHistoryForDateRange.put("2024-12-02", new BigDecimal("31000"));
         bitcoinHistoryForDateRange.put("2024-12-03", new BigDecimal("32000"));
 
-        // Mock conversion rates
         ConcurrentHashMap<String, BigDecimal> conversionRates = new ConcurrentHashMap<>();
         conversionRates.put("EUR", new BigDecimal("0.85"));
         conversionRates.put("GBP", new BigDecimal("0.75"));
