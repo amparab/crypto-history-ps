@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from your GitHub repository
+                // Checkout code
                 git 'https://github.com/amparab/crypto-history.git'
             }
         }
