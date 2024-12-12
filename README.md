@@ -39,8 +39,8 @@ Techstack : ReactJs, Material UI
 
 ## Backend features
 The backend exposes 2 endpoints to the users which are accessible via Swagger http://localhost:8080/swagger-ui/index.html#/
-1. /bitcoin/history/dateRange : This is the main endpoint responsible for returning the historical prices based on date range
-2. /currency : This returns the list of currencies supported by the application.
+1. ```/bitcoin/history/dateRange``` : This is the main endpoint responsible for returning the historical prices based on date range
+2. ```/currency``` : This returns the list of currencies supported by the application.
 
 Techstack : Java, SpringBoot
 
