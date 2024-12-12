@@ -25,8 +25,11 @@ The UI should be accessible on http://localhost:8080/
 
 ## UI Features
 There are 3 required inputs that the user is expected to give.
+
 From Date : The date from which user needs the bitcoin prices.
+
 To Date : The date to which the user needs to bitcoin prices.
+
 Currency : The default currency to display the prices is USD, but the user can request the history in a desired currency from dropdown.
 
 The highest and lowest values in the date range are displayed with markers "(high)" and "(low)".
