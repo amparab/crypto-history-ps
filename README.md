@@ -119,5 +119,7 @@ A background thread can be introduced to monitor the last cache update time.
 If the cache is not updated as expected (e.g., due to an external service failure):
 The system can make an appropriate decision, such as serving stale data and displaying a relevant message to the user.
 
+Add timeouts to REST calls when interacting with external APIs.
+
 
 
