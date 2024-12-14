@@ -1,11 +1,11 @@
 # crypto-history
 
 This is a project to fetch the bitcoin prices history for a specified date range.
-This project consists of a UI and a backend to server the request.
+This project consists of a UI and a Backend service.
 
 ## Run the service locally.
 
-You can run the service locally in your favourite IDE.
+You can run the service locally.
 Just add the following VM arg. ```-Dapi_key=<API_KEY>```
 and run the Spring boot application.
 The UI should be accessible on http://localhost:8080/
@@ -25,8 +25,11 @@ The UI should be accessible on http://localhost:8080/
 
 ## UI Features
 There are 3 required inputs that the user is expected to give.
+
 From Date : The date from which user needs the bitcoin prices.
+
 To Date : The date to which the user needs to bitcoin prices.
+
 Currency : The default currency to display the prices is USD, but the user can request the history in a desired currency from dropdown.
 
 The highest and lowest values in the date range are displayed with markers "(high)" and "(low)".
@@ -36,8 +39,8 @@ Techstack : ReactJs, Material UI
 
 ## Backend features
 The backend exposes 2 endpoints to the users which are accessible via Swagger http://localhost:8080/swagger-ui/index.html#/
-1. /bitcoin/history/dateRange : This is the main endpoint responsible for returning the historical prices based on date range
-2. /currency : This returns the list of currencies supported by the application.
+1. ```/bitcoin/history/dateRange``` : This is the main endpoint responsible for returning the historical prices based on date range
+2. ```/currency``` : This returns the list of currencies supported by the application.
 
 Techstack : Java, SpringBoot
 
